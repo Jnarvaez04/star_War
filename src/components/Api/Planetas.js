@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 
 export const PlanetasApi = ({
   planeta,
@@ -22,9 +22,10 @@ export const PlanetasApi = ({
             <img src="https://lafuerzanoticias.files.wordpress.com/2018/10/mustafar-tall.jpg?w=1536&h=768&crop=1" alt="" />
           </div>
           <h2 className="mt-1 text-4xl font-normal text-white">{ planeta }</h2>
+          <div className="scroll">
           <p className="mt-1 text-xl font-base tracking-normal text-white">
             <h3 className="text-base text-yellow-300">
-              Rotation Period: <span className="text-white pl-1"></span>
+              Rotation Period: <span className="text-white pl-1">{}</span>
             </h3>
             <h3 className="text-base text-yellow-300">
               Climate: <span className="text-white pl-1">{ clima }</span>
@@ -32,11 +33,15 @@ export const PlanetasApi = ({
             <h3 className="text-base text-yellow-300">
               Terrain: <span className="text-white pl-1">{ terreno }</span>
             </h3>
+            <h3 className="text-base text-yellow-300">
+              Created: <span className="text-white pl-1">{ creado }</span>
+            </h3>
           </p>
+          </div>
           <hr className="mt-3 border-none h-px bg-slate-900	" />
           <div className="flex mt-3 justify-between">
             <h3 className="text-base font-semibold text-white">{ diametro }</h3>
-            <i className="text-white">{ creado }</i>
+            <i className="text-white">{ }</i>
           </div>
         </div>
       </div>

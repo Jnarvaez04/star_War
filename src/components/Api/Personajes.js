@@ -1,4 +1,7 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
+import {Link} from "react-router-dom";
+import { UsePersons } from "../../Hooks/UsePerson";
+
 
 export const PersonajessApi = ({
   personaje,
@@ -9,6 +12,7 @@ export const PersonajessApi = ({
   creado,
   altura,
   mass,
+  num
   // poblacion,
 }) => {
   return (
@@ -29,11 +33,9 @@ export const PersonajessApi = ({
           <div className="scroll">
             <p className="mt-1 text-xl font-base tracking-normal text-white">
               <h3 className="text-base text-yellow-300">
-                hair_color:{" "}
                 <span className="text-white pl-1">{hair_color}</span>
               </h3>
               <h3 className="text-base text-yellow-300">
-                birth_year:{" "}
                 <span className="text-white pl-1">{birth_year}</span>
               </h3>
               <h3 className="text-base text-yellow-300">
@@ -48,9 +50,11 @@ export const PersonajessApi = ({
             </p>
           </div>
           <div className="w-100 h-auto my-3 flex content-center items-center align-middle">
-            <button className="className=rounded-none bg-yellow-500 w-28">
-              Detalle
-            </button>
+            <Link to={`/Details/${personaje}/${num}`} key={personaje}>
+              <button className="className=rounded-none bg-yellow-500 w-28">
+                Detalle
+              </button>
+            </Link>
           </div>
           <hr className="mt-3 border-none h-px bg-slate-900	" />
           <div className="flex mt-3 justify-between">

@@ -20,9 +20,9 @@ export const UsePlanets = () => {
     }
   };
 
-  const back = () => {
-    window.history.go(-1)
-  }
+  // const back = () => {
+  //   window.history.go(-1)
+  // }
  
   const getAllPlanets = async (numberPage) => {
     try {

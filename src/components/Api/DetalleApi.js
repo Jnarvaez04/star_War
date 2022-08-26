@@ -1,20 +1,19 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 
 export const DetalleApi = ({
-   personaje,
-   episodios,
-   vehicles,
-   starships,
+  personaje,
+  skin_color,
+  hair_color,
+  genero,
+  birth_year,
+  creado,
+  altura,
+  mass,
+  // poblacion,
 }) => {
 
   return (
     <>
-      {/* <div className="w-screen h-auto flex justify-center ">
-        <h2 className="text-white uppercase text-6xl">PLANETAs</h2>
-      </div> */}
-      <div className="w-screen h-auto flex justify-start items-center">
-        <button className="rounded-none bg-yellow-500 w-28"></button>
-      </div>
 
       <div className="">
         <div className="shadow rounded-2xl w-80 m-10 p-2">
@@ -28,18 +27,16 @@ export const DetalleApi = ({
           <div className="scroll">
             <p className="mt-1 text-xl font-base tracking-normal text-white">
               <h3 className="text-base text-yellow-300">
-                hair_color:{" "}
-                <span className="text-white pl-1">{episodios}</span>
+                <span className="text-white pl-1">{hair_color}</span>
               </h3>
               <h3 className="text-base text-yellow-300">
-                birth:
                 <span className="text-white pl-1">{birth_year}</span>
               </h3>
               <h3 className="text-base text-yellow-300">
-                Vehicles: <span className="text-white pl-1">{vehicles}</span>
+                height: <span className="text-white pl-1">{altura}</span>
               </h3>
               <h3 className="text-base text-yellow-300">
-                Mass: <span className="text-white pl-1">{starships}</span>
+                Mass: <span className="text-white pl-1">{mass}</span>
               </h3>
               <h3 className="text-base text-yellow-300">
                 Create: <span className="text-white pl-1">{creado}</span>

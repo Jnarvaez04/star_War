@@ -1,32 +1,38 @@
 import { useEffect } from "react";
-import { UseDetalle } from "../../Hooks/Detalle";
 import { DetalleApi } from "../Api/DetalleApi";
+import { UsePersons } from "../../Hooks/UsePerson";
 
-const PersonajesApp = () => {
+const  DetalleApp = () => {
 
-  const { getAllDetalle, dataDetalle, Contador, disminuir, aumentar } = UsePersons();
+  const { getAllPersons, dataPersons, Contador, disminuir, aumentar } = UsePersons();
 
   useEffect(() => {
     
-    getAllDetalle(Contador);
+    getAllPersons(Contador);
 
-  }, [dataDetalle]);
+  }, [dataPersons]);
 
   return (
     <>
       <center>
         <h1 className="mt-1 text-6xl font-normal text-white">
-          Listado de Detalle
+          Listado de Personajes
         </h1>
       </center>
       <div className="flex justify-around items-center flex-wrap">
-        {dataDetalle.map((Detalle) => (
+        {dataPersons.map((Personajes) => (
           <DetalleApi
-            key={Detalle.name}
-            personaje={Detalle.name}
-            altura={Detalle.films}
-            hair_color={Detalle.vehicles}
-            creado={Detalle.starships}
+            key={Personajes.name}
+            personaje={Personajes.name}
+            altura={Personajes.height}
+            hair_color={Personajes.hair_color}
+            creado={Personajes.created}
+            genero={Personajes.gender}
+            birth_year={Personajes.birth_year}
+            eye_color={Personajes.eye_color}
+            mass={Personajes.mass}
+            skin_color={Personajes.skin_color}
+            num={Contador}
           />
         ))}
       </div>
@@ -42,4 +48,4 @@ const PersonajesApp = () => {
   );
 };
 
-export default PersonajesApp;
+export default DetalleApp;

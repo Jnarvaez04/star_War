@@ -3,12 +3,12 @@ import { PlanetasApi } from "../Api/Planetas";
 import { UsePlanets } from "../../Hooks/UsePlanet";
 
 const PlanetasApp = () => {
+
+  // Desestructuramos la función del HOOKS
   const { getAllPlanets, dataPlanets, Contador, disminuir, aumentar } = UsePlanets();
 
   useEffect(() => {
-
     getAllPlanets(Contador);
-    
   }, [dataPlanets]);
 
   return (
@@ -29,6 +29,8 @@ const PlanetasApp = () => {
             poblacion={Planetas.population}
             gravedad={Planetas.gravity}
             diametro={Planetas.diameter}
+            popular={Planetas.population}
+            rotaticion={Planetas.rotation_period}
           />
         ))}
       </div>

@@ -20,9 +20,9 @@ export const UsePersons = () => {
     }
   };
 
-  const back = () => {
-    window.history.go(-1)
-  }
+  // const back = () => {
+  //   window.history.go(-1)
+  // }
  
   const getAllPersons = async (numberPage) => {
     try {
