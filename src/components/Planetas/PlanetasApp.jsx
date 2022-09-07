@@ -11,13 +11,15 @@ const PlanetasApp = () => {
     getAllPlanets(Contador);
   }, [dataPlanets]);
 
+
   return (
     <>
-      <center>
+      <center> 
         <h1 className="mt-1 text-6xl font-normal text-white">
           Listado de planetas
         </h1>
       </center>
+      
       <div className="flex justify-around items-center flex-wrap">
         {dataPlanets.map((Planetas) => (
           <PlanetasApi
@@ -34,7 +36,7 @@ const PlanetasApp = () => {
           />
         ))}
       </div>
-      
+
       <center>
         <div className="my-5">
           <button className="rounded-none bg-yellow-500 w-28" onClick={disminuir}> Anterior </button>

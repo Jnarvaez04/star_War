@@ -5,6 +5,7 @@ export const UsePersons = () => {
   const [dataPersons, setDataPersons] = useState([]);
   const [Contador, setContador] = useState(1);
  
+
   const disminuir = () => {
     if (Contador <= 1) {
       setContador(1);
@@ -12,6 +13,7 @@ export const UsePersons = () => {
       setContador(Contador - 1);
     }
   };
+  
   const aumentar = () => {
     if (Contador < 6) {
       setContador(Contador + 1);
@@ -24,6 +26,7 @@ export const UsePersons = () => {
   //   window.history.go(-1)
   // }
  
+  
   const getAllPersons = async (numberPage) => {
     try {
       var requestOptions = {

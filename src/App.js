@@ -7,7 +7,7 @@ import { CardApp } from "./components/Cards/CardApp";
 import { FooterApp } from "./components/Footer/FooterApp";
 import PlanetasApp  from "./components/Planetas/PlanetasApp";
 import PersonajesApp from "./components/Personajes/PersonajesApp";
-import DetallesApp from "./components/Detalle/DetalleApp";
+import DetalleApp from "./components/Detalle/DetalleApp";
 
 
 
@@ -23,7 +23,7 @@ function App() {
         <Routes>
           <Route path="personaje" element={< PersonajesApp /> } />
           <Route path="planeta" element={<PlanetasApp />} />
-          <Route path='detaller/:id' element={<DetallesApp/>} />
+          <Route path='detaller/:id' element={<DetalleApp/>} />
         </Routes>
       </BrowserRouter>
       <FooterApp />

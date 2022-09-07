@@ -1,6 +1,7 @@
 import React from "react";
 
 export const CardApp = () => {
+
   return (
     <>
       <div className="w-screen flex flex-row justify-center">
@@ -61,4 +62,5 @@ export const CardApp = () => {
       </div>
     </>
   );
+  
 };

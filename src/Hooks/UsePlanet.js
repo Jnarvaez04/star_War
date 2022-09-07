@@ -6,18 +6,22 @@ export const UsePlanets = () => {
   const [Contador, setContador] = useState(1);
  
   const disminuir = () => {
+
     if (Contador <= 1) {
       setContador(1);
     } else {
       setContador(Contador - 1);
     }
+
   };
+
   const aumentar = () => {
     if (Contador < 6) {
       setContador(Contador + 1);
     } else {
       setContador(6);
     }
+
   };
 
   // const back = () => {
@@ -42,6 +46,7 @@ export const UsePlanets = () => {
     }
   };
  
+  
   return {
     getAllPlanets,
     dataPlanets,

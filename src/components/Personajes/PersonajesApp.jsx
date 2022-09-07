@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 import { PersonajessApi } from "../Api/Personajes";
 import { UsePersons } from "../../Hooks/UsePerson";
+import { useParams } from "react-router-dom";
 
 const PersonajesApp = () => {
+  const params = useParams();
 
   const { getAllPersons, dataPersons, Contador, disminuir, aumentar } = UsePersons();
 
@@ -32,6 +34,7 @@ const PersonajesApp = () => {
             eye_color={Personajes.eye_color}
             mass={Personajes.mass}
             skin_color={Personajes.skin_color}
+            num={Personajes.num}
           />
         ))}
       </div>
