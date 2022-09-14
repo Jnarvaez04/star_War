@@ -1,5 +1,8 @@
 // import React, { useEffect, useState } from "react";
 
+import { FooterApp } from "../Footer/FooterApp";
+import { NavbarApp } from "../Navbar/NavbarApp";
+
 export const PlanetasApi = ({
   planeta,
   clima,
@@ -15,7 +18,6 @@ export const PlanetasApi = ({
       {/* <div className="w-screen h-auto flex justify-center ">
         <h2 className="text-white uppercase text-6xl">PLANETAs</h2>
       </div> */}
-
       <div className="">
         <div className="shadow rounded-2xl w-80 m-10 p-2">
           <div className="w-full h-44 overflow-hidden rounded-xl">

@@ -1,32 +1,22 @@
 import "./App.css";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { NavbarApp } from "./components/Navbar/NavbarApp";
-import { SliderApp } from "./components/Slider/SliderApp";
-import { InfoApp } from "./components/Information/InfoApp";
-import { CardApp } from "./components/Cards/CardApp";
-import { FooterApp } from "./components/Footer/FooterApp";
-import PlanetasApp  from "./components/Planetas/PlanetasApp";
+import { Routes, Route, BrowserRouter, Router } from "react-router-dom";
+import PlanetasApp from "./components/Planetas/PlanetasApp";
 import PersonajesApp from "./components/Personajes/PersonajesApp";
+import { DetalleApi } from "./components/Api/DetalleApi";
+import { HomeApp } from "./components/Home/HomeApp";
 import DetalleApp from "./components/Detalle/DetalleApp";
-
-
-
 
 function App() {
   return (
     <>
       <BrowserRouter>
-      <NavbarApp />
-      <SliderApp />
-      <InfoApp />
-      <CardApp />
         <Routes>
-          <Route path="personaje" element={< PersonajesApp /> } />
+          <Route path="/" element={<HomeApp />} />
+          <Route path="/personaje" element={<PersonajesApp />} />
           <Route path="planeta" element={<PlanetasApp />} />
-          <Route path='detaller/:id' element={<DetalleApp/>} />
+          <Route path="Details/:id" element={ <DetalleApp /> } />
         </Routes>
       </BrowserRouter>
-      <FooterApp />
     </>
   );
 }

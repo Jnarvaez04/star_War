@@ -50,7 +50,7 @@ export const PersonajessApi = ({
             </p>
           </div>
           <div className="w-100 h-auto my-3 flex content-center items-center align-middle">
-            <Link to={`Details/${personaje}/${num}`} key={personaje}>
+            <Link to={`Details/${personaje}`} key={personaje}>
               <button className="className=rounded-none bg-yellow-500 w-28">
                 Detalle
               </button>

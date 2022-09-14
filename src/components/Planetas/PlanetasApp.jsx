@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { PlanetasApi } from "../Api/Planetas";
 import { UsePlanets } from "../../Hooks/UsePlanet";
+import { NavbarApp } from "../Navbar/NavbarApp";
+import { FooterApp } from "../Footer/FooterApp";
 
 const PlanetasApp = () => {
 
@@ -13,9 +15,10 @@ const PlanetasApp = () => {
 
 
   return (
-    <>
+    <div>
+      <NavbarApp />
       <center> 
-        <h1 className="mt-1 text-6xl font-normal text-white">
+        <h1 className="mt-10 text-6xl font-normal text-white">
           Listado de planetas
         </h1>
       </center>
@@ -44,7 +47,8 @@ const PlanetasApp = () => {
           <button className="rounded-none bg-yellow-500 w-28" onClick={aumentar} > Siguiente </button>
       </div>
       </center>
-    </>
+      <FooterApp />
+    </div>
   );
 };
 

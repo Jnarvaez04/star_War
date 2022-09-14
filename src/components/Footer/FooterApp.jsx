@@ -8,7 +8,7 @@ import { FaYoutube } from "react-icons/fa";
 export const FooterApp = () => {
   return (
     <>
-      <div className='footer w-screen h-full flex justify-center align-middle'>
+      <div className='footer w-screen h-full flex justify-center align-middle bottom-0 left-0'>
       <div className='mt-5'>
         <h3 className='text-white text-center mb-22 mt-20 font-black'>FOLLOW STAR WARS:</h3>
         <div className='w-screen flex justify-center'>

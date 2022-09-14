@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { PersonajessApi } from "../Api/Personajes";
 import { UsePersons } from "../../Hooks/UsePerson";
 import { useParams } from "react-router-dom";
+import { NavbarApp } from "../Navbar/NavbarApp";
+import { FooterApp } from "../Footer/FooterApp";
 
 const PersonajesApp = () => {
   const params = useParams();
@@ -16,6 +18,7 @@ const PersonajesApp = () => {
 
   return (
     <>
+      <NavbarApp />
       <center>
         <h1 className="mt-1 text-6xl font-normal text-white">
           Listado de Personajes
@@ -46,6 +49,7 @@ const PersonajesApp = () => {
           <button className="rounded-none bg-yellow-500 w-28" onClick={aumentar} > Siguiente </button>
       </div>
       </center>
+      <FooterApp />
     </>
   );
 };
